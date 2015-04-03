@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tagtask.musicplayer"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Sherlock.__Theme.Light" >
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".service.MusicPlayService" >
+            <intent-filter>
+                <action android:name="com.tagtask.ACTION_PLAY" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".activity.MusicPlayer"
+            android:label="@string/title_activity_media_player"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <receiver android:name=".broadcastreceiver.NotificationRemoteviewReceiver" >
+        </receiver>
+
+        <activity
+            android:name="com.tagtask.musicplayer.activity.MyLibraryActivity"
+            android:label="@string/title_activity_my_library" >
+        </activity>
+
+        <receiver android:name="com.tagtask.musicplayer.broadcastreceiver.PhoneStateReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+       
+    </application>
+
+</manifest>

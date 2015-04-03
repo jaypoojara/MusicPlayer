@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MusicPlayer</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_media_player">Media Player</string>
+
+    <string-array name="options">
+        <item>My Library</item>
+        <item>My Playlists</item>
+    </string-array>
+
+    <string name="title_activity_my_library">MyLibraryActivity</string>
+
+    <string-array name="filter_song">
+        <item>Songs</item>
+        <item>Album</item>
+        <item>Genere</item>
+        <item>Artist</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+
+    <dimen name="slidingmenu_offset">190dp</dimen>
+    <dimen name="app_icon_height">65dp</dimen>
+    <dimen name="app_icon_width">65dp</dimen>
+
+</resources>
